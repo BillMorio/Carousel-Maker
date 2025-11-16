@@ -71,6 +71,37 @@ const gradientTheme5: Theme = {
   accentColor: "#FEF3C7",
 };
 
+// Paper texture themes with subtle grain and warm tones
+const paperTheme1: Theme = {
+  backgroundColor: "#F7F3E9",
+  textColor: "#2D3748",
+  accentColor: "#8B7355",
+};
+
+const paperTheme2: Theme = {
+  backgroundColor: "#FFF8F0",
+  textColor: "#3D2817",
+  accentColor: "#C19A6B",
+};
+
+const paperTheme3: Theme = {
+  backgroundColor: "#FAF6F0",
+  textColor: "#4A3F35",
+  accentColor: "#A67C52",
+};
+
+const paperTheme4: Theme = {
+  backgroundColor: "#FBF7F4",
+  textColor: "#3E3530",
+  accentColor: "#D4AF37",
+};
+
+const paperTheme5: Theme = {
+  backgroundColor: "#F5F1E8",
+  textColor: "#2B2620",
+  accentColor: "#B8956A",
+};
+
 export const defaultTemplates: CarouselTemplate[] = [
   {
     id: "the-hook",
@@ -549,7 +580,8 @@ export const defaultTemplates: CarouselTemplate[] = [
   {
     id: generateId(),
     name: "Gradient Vibes",
-    description: "A minimal gradient aesthetic with smooth color transitions and clean typography",
+    description:
+      "A minimal gradient aesthetic with smooth color transitions and clean typography",
     category: "social",
     carousel: {
       id: generateId(),
@@ -567,7 +599,8 @@ export const defaultTemplates: CarouselTemplate[] = [
           type: "intro",
           introStyle: "image",
           theme: gradientTheme1,
-          backgroundImage: "data:image/svg+xml,%3Csvg width='1080' height='1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23667eea;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23764ba2;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1080' height='1080' fill='url(%23grad1)'/%3E%3Cline x1='100' y1='200' x2='400' y2='200' stroke='white' stroke-width='2' opacity='0.3'/%3E%3Cline x1='700' y1='800' x2='950' y2='800' stroke='white' stroke-width='2' opacity='0.3'/%3E%3Ccircle cx='150' cy='900' r='40' fill='none' stroke='white' stroke-width='2' opacity='0.2'/%3E%3Cpath d='M 850 150 Q 900 200 850 250' fill='none' stroke='white' stroke-width='2' opacity='0.25'/%3E%3C/svg%3E",
+          backgroundImage:
+            "data:image/svg+xml,%3Csvg width='1080' height='1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23667eea;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23764ba2;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1080' height='1080' fill='url(%23grad1)'/%3E%3Cline x1='100' y1='200' x2='400' y2='200' stroke='white' stroke-width='2' opacity='0.3'/%3E%3Cline x1='700' y1='800' x2='950' y2='800' stroke='white' stroke-width='2' opacity='0.3'/%3E%3Ccircle cx='150' cy='900' r='40' fill='none' stroke='white' stroke-width='2' opacity='0.2'/%3E%3Cpath d='M 850 150 Q 900 200 850 250' fill='none' stroke='white' stroke-width='2' opacity='0.25'/%3E%3C/svg%3E",
           tagline: { text: "CREATIVE SERIES", enabled: true },
           title: { text: "Gradient Flow", enabled: true },
           paragraph: {
@@ -628,7 +661,8 @@ export const defaultTemplates: CarouselTemplate[] = [
           type: "outro",
           outroStyle: "image",
           theme: gradientTheme1,
-          backgroundImage: "data:image/svg+xml,%3Csvg width='1080' height='1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='gradOutro' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23667eea;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23764ba2;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1080' height='1080' fill='url(%23gradOutro)'/%3E%3Ccircle cx='540' cy='200' r='80' fill='none' stroke='white' stroke-width='3' opacity='0.25'/%3E%3Cline x1='200' y1='900' x2='880' y2='900' stroke='white' stroke-width='2' opacity='0.3'/%3E%3Cpath d='M 100 400 L 200 400 L 200 500' fill='none' stroke='white' stroke-width='2' opacity='0.2'/%3E%3Cpath d='M 980 600 L 880 600 L 880 700' fill='none' stroke='white' stroke-width='2' opacity='0.2'/%3E%3C/svg%3E",
+          backgroundImage:
+            "data:image/svg+xml,%3Csvg width='1080' height='1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='gradOutro' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23667eea;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23764ba2;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1080' height='1080' fill='url(%23gradOutro)'/%3E%3Ccircle cx='540' cy='200' r='80' fill='none' stroke='white' stroke-width='3' opacity='0.25'/%3E%3Cline x1='200' y1='900' x2='880' y2='900' stroke='white' stroke-width='2' opacity='0.3'/%3E%3Cpath d='M 100 400 L 200 400 L 200 500' fill='none' stroke='white' stroke-width='2' opacity='0.2'/%3E%3Cpath d='M 980 600 L 880 600 L 880 700' fill='none' stroke='white' stroke-width='2' opacity='0.2'/%3E%3C/svg%3E",
           tagline: { text: "", enabled: false },
           title: { text: "Create Something Beautiful", enabled: true },
           paragraph: {
@@ -636,6 +670,102 @@ export const defaultTemplates: CarouselTemplate[] = [
             enabled: true,
           },
           cta: { text: "Follow for More", enabled: true },
+          showInteractionIcons: true,
+        },
+      ],
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    },
+  },
+  {
+    id: generateId(),
+    name: "Paper Notes",
+    description:
+      "Warm paper textures with handwritten feel and organic aesthetic",
+    category: "education",
+    carousel: {
+      id: generateId(),
+      name: "Paper Notes",
+      globalSettings: {
+        creatorName: "Knowledge Keeper",
+        creatorTitle: "Educator",
+        creatorAvatar: "",
+        aspectRatio: "1:1",
+        defaultTheme: paperTheme1,
+      },
+      slides: [
+        {
+          id: generateId(),
+          type: "intro",
+          introStyle: "standard",
+          theme: paperTheme1,
+          tagline: { text: "LESSON OF THE DAY", enabled: true },
+          title: { text: "Write It Down", enabled: true },
+          paragraph: {
+            text: "The art of learning through notes",
+            enabled: true,
+          },
+        },
+        {
+          id: generateId(),
+          type: "content",
+          slideStyle: "text",
+          theme: paperTheme2,
+          tagline: { text: "NOTE #1", enabled: true },
+          title: { text: "Clarity comes from writing", enabled: true },
+          paragraph: {
+            text: "When you write things down, you process them deeper. Your thoughts become tangible.",
+            enabled: true,
+          },
+        },
+        {
+          id: generateId(),
+          type: "content",
+          slideStyle: "text",
+          theme: paperTheme3,
+          tagline: { text: "NOTE #2", enabled: true },
+          title: { text: "Memory needs anchors", enabled: true },
+          paragraph: {
+            text: "Notes serve as mental bookmarks. They help you recall not just facts, but the moment of learning.",
+            enabled: true,
+          },
+        },
+        {
+          id: generateId(),
+          type: "content",
+          slideStyle: "text",
+          theme: paperTheme4,
+          tagline: { text: "NOTE #3", enabled: true },
+          title: { text: "Handwriting connects ideas", enabled: true },
+          paragraph: {
+            text: "The physical act of writing creates neural pathways. Your hand and brain work together.",
+            enabled: true,
+          },
+        },
+        {
+          id: generateId(),
+          type: "content",
+          slideStyle: "text",
+          theme: paperTheme5,
+          tagline: { text: "NOTE #4", enabled: true },
+          title: { text: "Review builds mastery", enabled: true },
+          paragraph: {
+            text: "Your notes are living documents. Return to them, refine them, and watch your understanding grow.",
+            enabled: true,
+          },
+        },
+        {
+          id: generateId(),
+          type: "outro",
+          outroStyle: "standard",
+          theme: paperTheme1,
+          tagline: { text: "", enabled: false },
+          title: { text: "Start Your Learning Journal", enabled: true },
+          paragraph: {
+            text: "One note at a time",
+            enabled: true,
+          },
+          cta: { text: "Follow for More Wisdom", enabled: true },
           showInteractionIcons: true,
         },
       ],

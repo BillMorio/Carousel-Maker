@@ -46,6 +46,8 @@ export function ContentEditor({ slide, onUpdate }: ContentEditorProps) {
                   source: "upload",
                   scale: 1,
                   position: "center",
+                  borderRadius: 8,
+                  shadow: 0,
                 },
               })
             }
@@ -61,6 +63,75 @@ export function ContentEditor({ slide, onUpdate }: ContentEditorProps) {
               Generate (Coming Soon)
             </Button>
           </div>
+
+          {/* Image Styling Controls */}
+          {slide.image && (
+            <div className="space-y-3 rounded-md border p-3">
+              <div className="text-xs font-medium text-muted-foreground">
+                Image Style
+              </div>
+
+              {/* Border Radius */}
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <Label className="text-xs">Border Radius</Label>
+                  <span className="text-xs text-muted-foreground">
+                    {slide.image.borderRadius ?? 8}px
+                  </span>
+                </div>
+                <input
+                  type="range"
+                  min="0"
+                  max="50"
+                  value={slide.image.borderRadius ?? 8}
+                  onChange={(e) => {
+                    const newBorderRadius = parseInt(e.target.value);
+                    onUpdate({
+                      image: {
+                        url: slide.image!.url,
+                        source: slide.image!.source,
+                        scale: slide.image!.scale,
+                        position: slide.image!.position,
+                        borderRadius: newBorderRadius,
+                        shadow: slide.image!.shadow ?? 0,
+                      },
+                    });
+                  }}
+                  className="w-full"
+                />
+              </div>
+
+              {/* Shadow */}
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <Label className="text-xs">Shadow</Label>
+                  <span className="text-xs text-muted-foreground">
+                    {slide.image.shadow ?? 0}
+                  </span>
+                </div>
+                <input
+                  type="range"
+                  min="0"
+                  max="50"
+                  value={slide.image.shadow ?? 0}
+                  onChange={(e) => {
+                    const newShadow = parseInt(e.target.value);
+                    onUpdate({
+                      image: {
+                        url: slide.image!.url,
+                        source: slide.image!.source,
+                        scale: slide.image!.scale,
+                        position: slide.image!.position,
+                        borderRadius: slide.image!.borderRadius ?? 8,
+                        shadow: newShadow,
+                      },
+                    });
+                  }}
+                  className="w-full"
+                />
+              </div>
+            </div>
+          )}
         </div>
       )}
 

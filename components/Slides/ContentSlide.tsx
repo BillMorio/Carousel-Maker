@@ -137,7 +137,13 @@ export function ContentSlide({ slide, globalSettings }: ContentSlideProps) {
                 style={{
                   height: "192px",
                   overflow: "hidden",
-                  borderRadius: "8px",
+                  borderRadius: `${slide.image!.borderRadius ?? 8}px`,
+                  boxShadow:
+                    slide.image!.shadow && slide.image!.shadow > 0
+                      ? `0 ${slide.image!.shadow / 4}px ${
+                          slide.image!.shadow
+                        }px rgba(0, 0, 0, ${0.1 + slide.image!.shadow / 100})`
+                      : "none",
                 }}
               >
                 <div
@@ -162,7 +168,13 @@ export function ContentSlide({ slide, globalSettings }: ContentSlideProps) {
               position: "relative",
               height: "100%",
               overflow: "hidden",
-              borderRadius: "8px",
+              borderRadius: `${slide.image!.borderRadius || 8}px`,
+              boxShadow:
+                slide.image!.shadow && slide.image!.shadow > 0
+                  ? `0 ${slide.image!.shadow / 4}px ${
+                      slide.image!.shadow
+                    }px rgba(0, 0, 0, ${0.1 + slide.image!.shadow / 100})`
+                  : "none",
             }}
           >
             <div

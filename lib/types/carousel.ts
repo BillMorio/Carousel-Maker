@@ -63,6 +63,8 @@ export interface ContentSlide extends BaseSlide {
     source: ImageSource;
     scale: number; // 0.5 to 2.0
     position: ImagePosition;
+    borderRadius: number; // 0 to 50 (px)
+    shadow: number; // 0 to 50 (intensity)
   };
 
   // If imageSource === 'search'

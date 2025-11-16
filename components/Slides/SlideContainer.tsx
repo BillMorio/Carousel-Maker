@@ -20,13 +20,16 @@ export function SlideContainer({
   aspectRatio,
   globalSettings,
 }: SlideContainerProps) {
+  // Check if backgroundColor is a gradient
+  const isGradient = backgroundColor.includes("gradient");
+
   return (
     <div
       style={{
         position: "relative",
         width: "100%",
         overflow: "hidden",
-        backgroundColor,
+        ...(isGradient ? { background: backgroundColor } : { backgroundColor }),
         ...aspectRatioStyles[aspectRatio],
       }}
     >
