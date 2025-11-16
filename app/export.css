@@ -1,0 +1,26 @@
+/* Export-safe color overrides - converts oklch to rgb for html2canvas compatibility */
+[data-export-mode="true"],
+[data-export-mode="true"] * {
+  --background: rgb(255, 255, 255) !important;
+  --foreground: rgb(28, 25, 23) !important;
+  --card: rgb(255, 255, 255) !important;
+  --card-foreground: rgb(28, 25, 23) !important;
+  --popover: rgb(255, 255, 255) !important;
+  --popover-foreground: rgb(28, 25, 23) !important;
+  --primary: rgb(41, 37, 36) !important;
+  --primary-foreground: rgb(250, 250, 249) !important;
+  --secondary: rgb(245, 245, 244) !important;
+  --secondary-foreground: rgb(41, 37, 36) !important;
+  --muted: rgb(245, 245, 244) !important;
+  --muted-foreground: rgb(120, 113, 108) !important;
+  --accent: rgb(245, 245, 244) !important;
+  --accent-foreground: rgb(41, 37, 36) !important;
+  --destructive: rgb(220, 38, 38) !important;
+  --border: rgb(231, 229, 228) !important;
+  --input: rgb(231, 229, 228) !important;
+  --ring: rgb(168, 162, 158) !important;
+
+  /* Override any lab/oklch/lch colors */
+  color: inherit !important;
+  background-color: inherit !important;
+}
