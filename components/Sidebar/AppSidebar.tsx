@@ -5,6 +5,7 @@ import { ColorPaletteSection } from "./ColorPaletteSection";
 import { TextSettings } from "./TextSettings";
 import { EffectsSection } from "./EffectsSection";
 import { CreatorInfoSection } from "./CreatorInfoSection";
+import { GlobalSettingsEditor } from "@/components/PropertyEditors/GlobalSettingsEditor";
 
 interface AppSidebarProps {
   globalSettings: GlobalSettings;
@@ -39,6 +40,8 @@ export function AppSidebar({ globalSettings, onUpdate }: AppSidebarProps) {
             creatorTitle={globalSettings.creatorTitle}
             onChange={(updates) => onUpdate(updates)}
           />
+
+          <GlobalSettingsEditor settings={globalSettings} onUpdate={onUpdate} />
         </div>
       </ScrollArea>
     </div>

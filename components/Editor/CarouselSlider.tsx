@@ -16,14 +16,35 @@ export function CarouselSlider({
   currentSlideIndex,
   globalSettings,
 }: CarouselSliderProps) {
-  const renderSlide = (slide: Slide) => {
+  const renderSlide = (slide: Slide, index: number) => {
     switch (slide.type) {
       case "intro":
-        return <IntroSlide slide={slide} globalSettings={globalSettings} />;
+        return (
+          <IntroSlide
+            slide={slide}
+            globalSettings={globalSettings}
+            currentSlideIndex={index}
+            totalSlides={slides.length}
+          />
+        );
       case "content":
-        return <ContentSlide slide={slide} globalSettings={globalSettings} />;
+        return (
+          <ContentSlide
+            slide={slide}
+            globalSettings={globalSettings}
+            currentSlideIndex={index}
+            totalSlides={slides.length}
+          />
+        );
       case "outro":
-        return <OutroSlide slide={slide} globalSettings={globalSettings} />;
+        return (
+          <OutroSlide
+            slide={slide}
+            globalSettings={globalSettings}
+            currentSlideIndex={index}
+            totalSlides={slides.length}
+          />
+        );
     }
   };
 
@@ -68,7 +89,7 @@ export function CarouselSlider({
                   }}
                 >
                   <div data-carousel-slide={isActive ? "true" : undefined}>
-                    {renderSlide(slide)}
+                    {renderSlide(slide, index)}
                   </div>
                 </div>
               </div>

@@ -7,9 +7,16 @@ import { SlideContainer } from "./SlideContainer";
 interface ContentSlideProps {
   slide: ContentSlideType;
   globalSettings: GlobalSettings;
+  currentSlideIndex?: number;
+  totalSlides?: number;
 }
 
-export function ContentSlide({ slide, globalSettings }: ContentSlideProps) {
+export function ContentSlide({
+  slide,
+  globalSettings,
+  currentSlideIndex,
+  totalSlides,
+}: ContentSlideProps) {
   const hasImage = slide.slideStyle !== "text" && slide.image;
 
   return (
@@ -17,6 +24,8 @@ export function ContentSlide({ slide, globalSettings }: ContentSlideProps) {
       backgroundColor={slide.theme.backgroundColor}
       aspectRatio={globalSettings.aspectRatio}
       globalSettings={globalSettings}
+      currentSlideIndex={currentSlideIndex}
+      totalSlides={totalSlides}
     >
       <div
         style={{

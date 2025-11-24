@@ -18,7 +18,13 @@ export interface BaseSlide {
 // INTRO SLIDE
 // ----------------------------------------------------------------------------
 
-export type IntroStyle = "standard" | "emoji" | "headshot" | "image";
+export type IntroStyle =
+  | "standard"
+  | "emoji"
+  | "headshot"
+  | "image"
+  | "split-highlight"
+  | "side-portrait";
 
 export interface IntroSlide extends BaseSlide {
   type: "intro";
@@ -27,21 +33,39 @@ export interface IntroSlide extends BaseSlide {
   // Conditional: if introStyle === 'headshot'
   headshot?: string; // image URL/base64
 
-  // Conditional: if introStyle === 'image'
+  // Conditional: if introStyle === 'image' or 'side-portrait'
   backgroundImage?: string;
 
-  // Text content with individual toggles
+  // Custom layout data for special styles
+  layoutData?: {
+    // For split-highlight: which words to highlight
+    highlightWords?: number[]; // array of word indices to highlight
+    highlightColors?: string[]; // colors for each highlight
+    // For side-portrait: image position
+    imagePosition?: "left" | "right";
+  };
+
+  // Text content with individual toggles and styling
   tagline: {
     text: string;
     enabled: boolean;
+    fontSize?: number; // in px
+    fontWeight?: number; // 400, 500, 600, 700, etc.
+    textAlign?: "left" | "center" | "right";
   };
   title: {
     text: string;
     enabled: boolean;
+    fontSize?: number;
+    fontWeight?: number;
+    textAlign?: "left" | "center" | "right";
   };
   paragraph: {
     text: string;
     enabled: boolean;
+    fontSize?: number;
+    fontWeight?: number;
+    textAlign?: "left" | "center" | "right";
   };
 }
 
@@ -147,6 +171,8 @@ export interface GlobalSettings {
   creatorAvatar?: string;
   aspectRatio: "4:5" | "1:1" | "16:9";
   defaultTheme: Theme;
+  // Decorative swipe indicator (shows "Swipe →" on slides)
+  showSwipeIndicator?: boolean;
 }
 
 export interface Carousel {

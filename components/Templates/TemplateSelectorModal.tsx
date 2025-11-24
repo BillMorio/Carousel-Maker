@@ -10,6 +10,7 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { TemplateCard } from "./TemplateCard";
 import { Carousel } from "@/lib/types/carousel";
 import { defaultTemplates } from "@/lib/templates";
+import { allTemplates } from "@/lib/templates/presets";
 
 // Define the template interface locally
 interface CarouselTemplate {
@@ -33,10 +34,13 @@ export function TemplateSelectorModal({
 }: TemplateSelectorModalProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
+  // Combine old templates with new modular templates
+  const allAvailableTemplates = [...defaultTemplates, ...allTemplates];
+
   const filteredTemplates =
     selectedCategory === "all"
-      ? defaultTemplates
-      : defaultTemplates.filter(
+      ? allAvailableTemplates
+      : allAvailableTemplates.filter(
           (t: CarouselTemplate) => t.category === selectedCategory
         );
 

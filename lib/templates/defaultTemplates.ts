@@ -102,6 +102,42 @@ const paperTheme5: Theme = {
   accentColor: "#B8956A",
 };
 
+// Grainy gradient mesh themes for modern SaaS aesthetic
+const grainMeshTheme1: Theme = {
+  backgroundColor:
+    "radial-gradient(at 20% 30%, #8B4513 0%, transparent 50%), radial-gradient(at 80% 70%, #6B46C1 0%, transparent 50%), radial-gradient(at 40% 80%, #0891B2 0%, transparent 50%), #1a1625",
+  textColor: "#FFFFFF",
+  accentColor: "#22D3EE",
+};
+
+const grainMeshTheme2: Theme = {
+  backgroundColor:
+    "radial-gradient(at 30% 20%, #A0522D 0%, transparent 50%), radial-gradient(at 70% 60%, #7C3AED 0%, transparent 50%), radial-gradient(at 50% 90%, #14B8A6 0%, transparent 50%), #1e1b2e",
+  textColor: "#FFFFFF",
+  accentColor: "#C084FC",
+};
+
+const grainMeshTheme3: Theme = {
+  backgroundColor:
+    "radial-gradient(at 60% 40%, #8B4513 0%, transparent 50%), radial-gradient(at 20% 70%, #5B21B6 0%, transparent 50%), radial-gradient(at 80% 20%, #0E7490 0%, transparent 50%), #1a1a2e",
+  textColor: "#FFFFFF",
+  accentColor: "#5EEAD4",
+};
+
+const grainMeshTheme4: Theme = {
+  backgroundColor:
+    "radial-gradient(at 40% 60%, #CD853F 0%, transparent 50%), radial-gradient(at 70% 30%, #6D28D9 0%, transparent 50%), radial-gradient(at 30% 90%, #06B6D4 0%, transparent 50%), #1c1625",
+  textColor: "#FFFFFF",
+  accentColor: "#A78BFA",
+};
+
+const grainMeshTheme5: Theme = {
+  backgroundColor:
+    "radial-gradient(at 50% 50%, #A0522D 0%, transparent 50%), radial-gradient(at 90% 40%, #7C3AED 0%, transparent 50%), radial-gradient(at 10% 80%, #0891B2 0%, transparent 50%), #1a1829",
+  textColor: "#FFFFFF",
+  accentColor: "#67E8F9",
+};
+
 export const defaultTemplates: CarouselTemplate[] = [
   {
     id: "the-hook",
@@ -766,6 +802,105 @@ export const defaultTemplates: CarouselTemplate[] = [
             enabled: true,
           },
           cta: { text: "Follow for More Wisdom", enabled: true },
+          showInteractionIcons: true,
+        },
+      ],
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    },
+  },
+  {
+    id: generateId(),
+    name: "Mesh Gradient",
+    description: "Modern grainy gradient mesh with premium SaaS aesthetic",
+    category: "marketing",
+    carousel: {
+      id: generateId(),
+      name: "Mesh Gradient",
+      globalSettings: {
+        creatorName: "Premium Studio",
+        creatorTitle: "Design Agency",
+        creatorAvatar: "",
+        aspectRatio: "1:1",
+        defaultTheme: grainMeshTheme1,
+      },
+      slides: [
+        {
+          id: generateId(),
+          type: "intro",
+          introStyle: "image",
+          theme: grainMeshTheme1,
+          backgroundImage:
+            "data:image/svg+xml,%3Csvg width='1080' height='1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3CradialGradient id='g1' cx='20%25' cy='30%25'%3E%3Cstop offset='0%25' style='stop-color:%238B4513;stop-opacity:1' /%3E%3Cstop offset='50%25' style='stop-color:%238B4513;stop-opacity:0' /%3E%3C/radialGradient%3E%3CradialGradient id='g2' cx='80%25' cy='70%25'%3E%3Cstop offset='0%25' style='stop-color:%236B46C1;stop-opacity:1' /%3E%3Cstop offset='50%25' style='stop-color:%236B46C1;stop-opacity:0' /%3E%3C/radialGradient%3E%3CradialGradient id='g3' cx='40%25' cy='80%25'%3E%3Cstop offset='0%25' style='stop-color:%230891B2;stop-opacity:1' /%3E%3Cstop offset='50%25' style='stop-color:%230891B2;stop-opacity:0' /%3E%3C/radialGradient%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeBlend mode='multiply' in2='SourceGraphic'/%3E%3C/filter%3E%3C/defs%3E%3Crect width='1080' height='1080' fill='%231a1625'/%3E%3Crect width='1080' height='1080' fill='url(%23g1)'/%3E%3Crect width='1080' height='1080' fill='url(%23g2)'/%3E%3Crect width='1080' height='1080' fill='url(%23g3)'/%3E%3Crect width='1080' height='1080' fill='white' filter='url(%23noise)' opacity='0.15'/%3E%3C/svg%3E",
+          tagline: { text: "NEXT GENERATION", enabled: true },
+          title: { text: "Build The Future", enabled: true },
+          paragraph: {
+            text: "Modern tools for modern teams",
+            enabled: true,
+          },
+        },
+        {
+          id: generateId(),
+          type: "content",
+          slideStyle: "text",
+          theme: grainMeshTheme2,
+          tagline: { text: "FEATURE 01", enabled: true },
+          title: { text: "Lightning Fast Performance", enabled: true },
+          paragraph: {
+            text: "Experience blazing speed with our optimized architecture. Built for scale, designed for efficiency.",
+            enabled: true,
+          },
+        },
+        {
+          id: generateId(),
+          type: "content",
+          slideStyle: "text",
+          theme: grainMeshTheme3,
+          tagline: { text: "FEATURE 02", enabled: true },
+          title: { text: "Seamless Integration", enabled: true },
+          paragraph: {
+            text: "Connect with your favorite tools in minutes. One platform, infinite possibilities.",
+            enabled: true,
+          },
+        },
+        {
+          id: generateId(),
+          type: "content",
+          slideStyle: "text",
+          theme: grainMeshTheme4,
+          tagline: { text: "FEATURE 03", enabled: true },
+          title: { text: "Enterprise Security", enabled: true },
+          paragraph: {
+            text: "Bank-level encryption and compliance. Your data is protected at every layer.",
+            enabled: true,
+          },
+        },
+        {
+          id: generateId(),
+          type: "content",
+          slideStyle: "text",
+          theme: grainMeshTheme5,
+          tagline: { text: "FEATURE 04", enabled: true },
+          title: { text: "24/7 Support", enabled: true },
+          paragraph: {
+            text: "Real humans, real help. Our team is here whenever you need us, day or night.",
+            enabled: true,
+          },
+        },
+        {
+          id: generateId(),
+          type: "outro",
+          outroStyle: "image",
+          theme: grainMeshTheme1,
+          backgroundImage:
+            "data:image/svg+xml,%3Csvg width='1080' height='1080' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3CradialGradient id='og1' cx='20%25' cy='30%25'%3E%3Cstop offset='0%25' style='stop-color:%238B4513;stop-opacity:1' /%3E%3Cstop offset='50%25' style='stop-color:%238B4513;stop-opacity:0' /%3E%3C/radialGradient%3E%3CradialGradient id='og2' cx='80%25' cy='70%25'%3E%3Cstop offset='0%25' style='stop-color:%236B46C1;stop-opacity:1' /%3E%3Cstop offset='50%25' style='stop-color:%236B46C1;stop-opacity:0' /%3E%3C/radialGradient%3E%3CradialGradient id='og3' cx='40%25' cy='80%25'%3E%3Cstop offset='0%25' style='stop-color:%230891B2;stop-opacity:1' /%3E%3Cstop offset='50%25' style='stop-color:%230891B2;stop-opacity:0' /%3E%3C/radialGradient%3E%3Cfilter id='onoise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeBlend mode='multiply' in2='SourceGraphic'/%3E%3C/filter%3E%3C/defs%3E%3Crect width='1080' height='1080' fill='%231a1625'/%3E%3Crect width='1080' height='1080' fill='url(%23og1)'/%3E%3Crect width='1080' height='1080' fill='url(%23og2)'/%3E%3Crect width='1080' height='1080' fill='url(%23og3)'/%3E%3Crect width='1080' height='1080' fill='white' filter='url(%23onoise)' opacity='0.15'/%3E%3C/svg%3E",
+          tagline: { text: "", enabled: false },
+          title: { text: "Ready to Transform?", enabled: true },
+          paragraph: {
+            text: "Join thousands of teams already building better",
+            enabled: true,
+          },
+          cta: { text: "Start Free Trial", enabled: true },
           showInteractionIcons: true,
         },
       ],

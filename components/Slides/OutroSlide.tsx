@@ -8,14 +8,23 @@ import { MessageCircle, Heart, Bookmark } from "lucide-react";
 interface OutroSlideProps {
   slide: OutroSlideType;
   globalSettings: GlobalSettings;
+  currentSlideIndex?: number;
+  totalSlides?: number;
 }
 
-export function OutroSlide({ slide, globalSettings }: OutroSlideProps) {
+export function OutroSlide({
+  slide,
+  globalSettings,
+  currentSlideIndex,
+  totalSlides,
+}: OutroSlideProps) {
   return (
     <SlideContainer
       backgroundColor={slide.theme.backgroundColor}
       aspectRatio={globalSettings.aspectRatio}
       globalSettings={globalSettings}
+      currentSlideIndex={currentSlideIndex}
+      totalSlides={totalSlides}
     >
       <div
         style={{

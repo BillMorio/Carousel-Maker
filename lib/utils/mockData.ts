@@ -86,6 +86,7 @@ export function getMockCarousel(): Carousel {
       creatorAvatar: undefined,
       aspectRatio: "4:5",
       defaultTheme: defaultTheme,
+      showSwipeIndicator: true,
     },
     createdAt: new Date(),
     updatedAt: new Date(),
